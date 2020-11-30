@@ -44,7 +44,7 @@ unsigned int MiniAssembler_strb(unsigned int uiFromReg,
 
 /*--------------------------------------------------------------------*/
 
-/* Return the machine language equivalent of "b addr". 
+/* Return the machine language equivalent of "b addr".
    
    Parameters:
       ulAddr: the address denoted by addr, that is, the address to
