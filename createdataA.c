@@ -31,21 +31,21 @@ int main(void) {
    }
 
    /* Instr: mov w0, 'A'*/
-   uireg = 0;
-   uiadd1 = 'A';
+   uireg = 0x000000;
+   uiadd1 = 0x000041;
    ulData = MiniAssembler_mov(uireg, uiadd1);
    fwrite(&ulData, sizeof(unsigned int), 1, psFile);
    
    /* Instr: adr x1, grade */
-   uireg = 1;
+   uireg = 0x000001;
    uiadd1 = 0x420044;
    uiadd2 = 0x420060;
    ulData = MiniAssembler_adr(uireg, uiadd1, uiadd2);
    fwrite(&ulData, sizeof(unsigned int), 1, psFile);
 
    /* Instr: strb w0, [x1] */
-   uireg = 0;
-   uiadd1 = 1;
+   uireg = 0x000000;
+   uiadd1 = 0x000001;
    ulData = MiniAssembler_strb(uireg, uiadd1);
    fwrite(&ulData, sizeof(unsigned int), 1, psFile);
 
@@ -65,7 +65,7 @@ int main(void) {
 
    /* Writes address of BSS name instuctions 
       to x30 in getName's stackframe */
-   ulData = 0x420058;
+   ulData = 0x42005c;
    fwrite(&ulData, sizeof(unsigned long), 1, psFile);
 
    /* Closes file */
