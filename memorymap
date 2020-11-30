@@ -6,27 +6,22 @@ Kenar Vyas
    0x400788 <readString+8>:	stp	x21, x30, [sp,#16]
 
    First loop setup	
-//Int i = 0
    0x40078c <readString+12>:	mov	x19, #0x0                   	// #0
    0x400790 <readString+16>:	adrp	x21, 0x420000
 
    First loop
    0x400794 <readString+20>:	mov	w20, w19
    0x400798 <readString+24>:	ldr	x0, [x21,#72]
-// FGETC
    0x40079c <readString+28>:	bl	0x4005b0 <fgetc@plt>
-// IFSTATEMENT
    0x4007a0 <readString+32>:	cmp	w0, #0xa
    0x4007a4 <readString+36>:	b.eq	0x4007c0 <readString+64>
    0x4007a8 <readString+40>:	cmn	w0, #0x1
    0x4007ac <readString+44>:	b.eq	0x4007c0 <readString+64>
-// BUF[I] = C
    0x4007b0 <readString+48>:	add	x1, sp, #0x20
    0x4007b4 <readString+52>:	strb	w0, [x19,x1]
-// I++
    0x4007b8 <readString+56>:	add	x19, x19, #0x1
    0x4007bc <readString+60>:	b	0x400794 <readString+20>
-// END OF LOOP
+
 
    buf[i] = '\0';
    0x4007c0 <readString+64>:	add	x0, sp, #0x20
@@ -123,15 +118,24 @@ Data Section:
 BSS Section:
 
 	Address 	Description
-	0x420058	'Ken/0' (4) 
-	0x42005c	mov w0, 'A'	(4)
-	0x420060	adr x1, grade (4)
-	0x420064	strb w0, [x1] (4)
-	0x420068	b 0x400864 (4)
-	0x42006c	
-	0x420070	
-	0x420074	
-	0x420078	
+	0x420058	'Ken/0' 
+	0x42005c	mov w0, 'A'	
+	0x420060	adr x1, grade 
+	0x420064	strb w0, [x1] 
+	0x420068	b 0x400864 
+	
+
+A+:
+	Address 	Description
+	0x420058	'Ken/0' 
+	0x42005c	'A+/0/0' 
+	0x420060	adr x0, 0x42005c 
+	0x420064	bl 0x400600 <printf@plt>  
+	0x420068	adr x0, 0x400962 
+	0x42006c	bl 0x400600 <printf@plt>
+	0x420070	b 0x400878 
+		
+	
 
 Stack Section:
 
