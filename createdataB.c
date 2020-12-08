@@ -16,7 +16,7 @@ int main(void) {
    FILE *psFile;
    
    /* Opens file and enables write access */
-   psFile = fopen("datab", "w");
+   psFile = fopen("dataB", "w");
    /* Prints name to file */
    fprintf(psFile, name);
 

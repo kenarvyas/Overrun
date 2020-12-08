@@ -14,7 +14,7 @@ Student 2: What is your name?
 How many late days are you using on this assignment?
 (Reminder, you may use at most 1, and that only takes you until 23:59)
 
-
+0
 
 ------------------------------------------------------------------------
 Student 1: What authorized sources of information did you use to
@@ -22,7 +22,15 @@ complete the assignment? COPY THE LIST of authorized sources of
 information given in the "Policies" web page to this section of the
 readme file, and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website.
+
+Such documents include the course's lecture slides and precept handouts.
 
 ------------------------------------------------------------------------
 Student 2: What authorized sources of information did you use to
@@ -64,7 +72,9 @@ no unauthorized sources of information.
 Student 1: What is your assessment of the assignment? Was it helpful?
 Was it fun?
 
-
+I thought it was a fun assignment and a good way to understand/practice
+machine code as well as understand the very basic idea of buffer
+overrun attacks.
 
 ------------------------------------------------------------------------
 Student 2: What is your assessment of the assignment? Was it helpful?
@@ -86,13 +96,13 @@ According to 18 U.S. Code 1030, if you were to use a buffer overrun
 attack to commit fraud or related activity in connection with computers,
 but did not attempt to cause death and did not knowingly or recklessly
 cause death, then you could receive a maximum
-penalty of _ten years_ in prison.
+penalty of _twenty years_ in prison.
 
 
 According to 18 U.S. Code 1030, if you were to use a buffer
 overrun attack to commit fraud or related activity in connection
 with computers, and attempted to cause death or knowingly or
 recklessly caused death, then you could receive a maximum penalty
-of _twenty years__ in prison.
+of _of any term or maximum life__ in prison.
 
 ------------------------------------------------------------------------
